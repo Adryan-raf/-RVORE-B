@@ -28,8 +28,8 @@ Uma Árvore B de **ordem m** (m = número máximo de filhos por nó) satisfaz:
 |---|---|
 | Máximo de filhos por nó | `m` |
 | Máximo de chaves por nó | `m - 1` |
-| Mínimo de chaves por nó (exceto a raiz) | `ceil(m/2) - 1` |
-| Mínimo de filhos por nó interno (exceto a raiz) | `ceil(m/2)` |
+| Mínimo de chaves por nó (exceto a raiz) | `(m/2) - 1` |
+| Mínimo de filhos por nó interno (exceto a raiz) | `(m/2)` |
 | Raiz | no mínimo 1 chave e, se for nó interno, no mínimo 2 filhos |
 | Nó interno com `k` filhos | possui `k - 1` chaves |
 | Ordenação | as chaves de cada nó estão em ordem crescente e separam as subárvores dos filhos |
@@ -40,10 +40,9 @@ Uma Árvore B de **ordem m** (m = número máximo de filhos por nó) satisfaz:
 Exemplo, ordem 5 (de 2 a 4 chaves por nó, exceto na raiz):
 
 ```
-[30 45]
-    [10 20 25]
-    [35 40]
-    [50 55]
+          __________[30 45]______
+         |            |          |
+    [10 20 25]     [35 40]    [50 55]
 ```
 
 ## Código
