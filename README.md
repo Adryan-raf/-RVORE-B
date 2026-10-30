@@ -41,7 +41,7 @@ Exemplo, ordem 5 (de 2 a 4 chaves por nó, exceto na raiz):
 
 ```
           __________[30 45]______
-         |            |          |
+         |             |         |
     [10 20 25]     [35 40]    [50 55]
 ```
 
@@ -52,8 +52,6 @@ Exemplo, ordem 5 (de 2 a 4 chaves por nó, exceto na raiz):
 Cada nó guarda a quantidade de chaves, se é folha, o vetor de chaves e o vetor de filhos. Os vetores têm uma posição extra para tolerar o *overflow* momentâneo que antecede uma divisão.
 
 ```c
-#define ORDEM_MINIMA 3
-
 typedef struct NoB {
     int n;               /* quantidade atual de chaves                 */
     int folha;           /* 1 se o nó é folha, 0 caso contrário        */
@@ -109,7 +107,7 @@ NoB *criar_no(const ArvoreB *arv, int folha)
 
 ArvoreB *criar_arvore(int ordem)
 {
-    if (ordem < ORDEM_MINIMA)
+    if (ordem < 3)
         return NULL;
 
     ArvoreB *arv = malloc(sizeof(ArvoreB));
