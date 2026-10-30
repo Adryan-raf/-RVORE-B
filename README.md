@@ -65,11 +65,6 @@ typedef struct {
     NoB *raiz;
     int ordem;           /* m */
 } ArvoreB;
-
-/* Resultados de inserir() */
-#define INS_OK          0
-#define INS_DUPLICADA   1
-#define INS_SEM_MEMORIA (-1)
 ```
 
 Limites de ocupação calculados a partir da ordem:
